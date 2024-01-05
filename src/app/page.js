@@ -59,12 +59,12 @@ export default function Home() {
     }
 
     function getBackgroundProps() {
-        const { platinumNumber } = currentPlatinum;
+        const { background } = currentPlatinum;
 
         return {
             className: styles.background,
             style: {
-                backgroundImage: !isAnimating && `url(/backgrounds/${platinumNumber}.jpg)`,
+                backgroundImage: !isAnimating && `url(${background})`,
                 opacity: isAnimating ? 0 : 1,
                 transition: !isAnimating && "opacity 0.5s 0.1s ease-in-out"
             }

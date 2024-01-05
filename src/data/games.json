@@ -1,68 +1,74 @@
 {
-    "completed": [
-        {
-            "accent": "#633025",
-            "platinumNumber": 3,
-            "name": "Hades",
-            "review": [
-                "ROGUELIKE. That’s the only thing I need to say, to be honest. It’s my favorite kind of game (well, I also like Metroidvanias very much…) so I try to play them all.",
-                "I came back energized from my trip, and I had this game waiting on my door to be played. It released a month earlier from the day I got it, and I’ve been eyeing it for a while because a friend of mine was playing it on PC.",
-                "This game is meant to be played with a controller. The art is beatiful, the gameplay is amazing. I love the story bits and it always surprissed me with new stuff. I have to confess that I’m also a big fan of Greek mythology.",
-                "Get it and play it! You don’t need to get all the achievements, but it isn’t that difficult."
-            ],
-            "details": {
-                "completedDate": "September 18, 2021",
-                "firstTrophyDate": "September 13, 2021",
-                "genre": "Roguelite",
-                "hoursPlayed": 49,
-                "psnProfilesLink": "https://psnprofiles.com/trophies/13635-hades/nawetimebomb_13",
-                "rating": 5,
-                "releaseDate": "August 13, 2021",
-                "trophies": 50,
-                "typeOfTrophy": "platinum"
-            }
-        },
-        {
-            "accent": "#cccfd2",
-            "platinumNumber": 2,
-            "name": "Cthulhu Saves Christmas",
-            "review": [
-                "Ok, I couldn’t leave my house without playing another one. Started this one late today, but I checked the trophy list and it seemed easy. It really was.",
-                "I got this one from Limited Run Games, it is the number 1 game on their collection.",
-                "The game is good, a simple RPG, funny, a Lovecraftian protagonist. There are a lot of puns about Lovecraft’s tales and I love those. It is a good time, though it’s a very small game."
-            ],
-            "details": {
-                "completedDate": "September 7, 2021",
-                "firstTrophyDate": "September 6, 2021",
-                "genre": "RPG",
-                "hoursPlayed": 2,
-                "psnProfilesLink": "https://psnprofiles.com/trophies/13289-cthulhu-saves-christmas/nawetimebomb_13",
-                "rating": 4,
-                "releaseDate": "October 28, 2020",
-                "trophies": 17,
-                "typeOfTrophy": "platinum"
-            }
-        },
-        {
-            "accent": "#333268",
-            "platinumNumber": 1,
-            "name": "Ratchet & Clank: Rift Apart",
-            "review": [
-                "And I start this journey. I collect PlayStation stuff, and when the PS5 came out I was like, well, I need to play more games on it –to be fair, I played a lot of games on PS4, but not as many as I have collected over the years–. Then I found out about an user that collects and plays PS3 and Vita games until they get the Platinum trophy. So I was like, this is an excellent idea! And so, here I’m, trying to play all PS5 games I can and get all those trophies!",
-                "Now, here’s my first game! I knew this one was a quick Platinum that could help me start off the adventure, also I’m traveling for a couple of days tomorrow, so I needed to get it ASAP.",
-                "I loved the game, it was really hyped as the “first real PS5 game” that benefits from the PS5 hardware and load times, it didn’t really feel like that (I’ve played other PS5 games already on my other account), but it was really good, indeed. Not a huge fan of the series, I played some of them, but it was really fun. Recommended, specially for younger folks!"
-            ],
-            "details": {
-                "completedDate": "September 6, 2021",
-                "firstTrophyDate": "September 6, 2021",
-                "genre": "Platform",
-                "hoursPlayed": 8,
-                "psnProfilesLink": "https://psnprofiles.com/trophies/12996-ratchet-clank-rift-apart/nawetimebomb_13",
-                "rating": 4.5,
-                "releaseDate": "June 11, 2021",
-                "trophies": 47,
-                "typeOfTrophy": "platinum"
-            }
-        }
-    ]
+  "completed": [
+    {
+      "accent": "#633025",
+      "background": "https://imagedelivery.net/8kSbSWW3PwJD7xl1c183VA/ef78dbb4-f991-4d1b-0997-5e4a3a509b00/public",
+      "cover": "https://imagedelivery.net/8kSbSWW3PwJD7xl1c183VA/65af16a0-ff17-4829-4162-7a62d0e38a00/cover",
+      "platinumNumber": 3,
+      "name": "Hades",
+      "review": [
+        "ROGUELIKE. That’s the only thing I need to say, to be honest. It’s my favorite kind of game (well, I also like Metroidvanias very much…) so I try to play them all.",
+        "I came back energized from my trip, and I had this game waiting on my door to be played. It released a month earlier from the day I got it, and I’ve been eyeing it for a while because a friend of mine was playing it on PC.",
+        "This game is meant to be played with a controller. The art is beatiful, the gameplay is amazing. I love the story bits and it always surprissed me with new stuff. I have to confess that I’m also a big fan of Greek mythology.",
+        "Get it and play it! You don’t need to get all the achievements, but it isn’t that difficult."
+      ],
+      "details": {
+        "completedDate": "September 18, 2021",
+        "firstTrophyDate": "September 13, 2021",
+        "genre": "Roguelite",
+        "hoursPlayed": 49,
+        "psnProfilesLink": "https://psnprofiles.com/trophies/13635-hades/nawetimebomb_13",
+        "rating": 5,
+        "releaseDate": "August 13, 2021",
+        "trophies": 50,
+        "typeOfTrophy": "platinum"
+      }
+    },
+    {
+      "accent": "#cccfd2",
+      "platinumNumber": 2,
+      "name": "Cthulhu Saves Christmas",
+      "background": "https://imagedelivery.net/8kSbSWW3PwJD7xl1c183VA/577e2cfd-4b9f-4b84-b84b-134b8af6e100/public",
+      "cover": "https://imagedelivery.net/8kSbSWW3PwJD7xl1c183VA/c36e7e5a-74be-4980-9acc-3b87c6824f00/cover",
+      "review": [
+        "Ok, I couldn’t leave my house without playing another one. Started this one late today, but I checked the trophy list and it seemed easy. It really was.",
+        "I got this one from Limited Run Games, it is the number 1 game on their collection.",
+        "The game is good, a simple RPG, funny, a Lovecraftian protagonist. There are a lot of puns about Lovecraft’s tales and I love those. It is a good time, though it’s a very small game."
+      ],
+      "details": {
+        "completedDate": "September 7, 2021",
+        "firstTrophyDate": "September 6, 2021",
+        "genre": "RPG",
+        "hoursPlayed": 2,
+        "psnProfilesLink": "https://psnprofiles.com/trophies/13289-cthulhu-saves-christmas/nawetimebomb_13",
+        "rating": 4,
+        "releaseDate": "October 28, 2020",
+        "trophies": 17,
+        "typeOfTrophy": "platinum"
+      }
+    },
+    {
+      "accent": "#333268",
+      "background": "https://imagedelivery.net/8kSbSWW3PwJD7xl1c183VA/2c34c459-52f1-4620-0194-4756591dfc00/public",
+      "cover": "https://imagedelivery.net/8kSbSWW3PwJD7xl1c183VA/dc17a699-b970-43fd-8809-372dff1d1900/cover",
+      "platinumNumber": 1,
+      "name": "Ratchet & Clank: Rift Apart",
+      "review": [
+        "And I start this journey. I collect PlayStation stuff, and when the PS5 came out I was like, well, I need to play more games on it –to be fair, I played a lot of games on PS4, but not as many as I have collected over the years–. Then I found out about an user that collects and plays PS3 and Vita games until they get the Platinum trophy. So I was like, this is an excellent idea! And so, here I’m, trying to play all PS5 games I can and get all those trophies!",
+        "Now, here’s my first game! I knew this one was a quick Platinum that could help me start off the adventure, also I’m traveling for a couple of days tomorrow, so I needed to get it ASAP.",
+        "I loved the game, it was really hyped as the “first real PS5 game” that benefits from the PS5 hardware and load times, it didn’t really feel like that (I’ve played other PS5 games already on my other account), but it was really good, indeed. Not a huge fan of the series, I played some of them, but it was really fun. Recommended, specially for younger folks!"
+      ],
+      "details": {
+        "completedDate": "September 6, 2021",
+        "firstTrophyDate": "September 6, 2021",
+        "genre": "Platform",
+        "hoursPlayed": 8,
+        "psnProfilesLink": "https://psnprofiles.com/trophies/12996-ratchet-clank-rift-apart/nawetimebomb_13",
+        "rating": 4.5,
+        "releaseDate": "June 11, 2021",
+        "trophies": 47,
+        "typeOfTrophy": "platinum"
+      }
+    }
+  ]
 }

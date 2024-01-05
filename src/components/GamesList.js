@@ -26,14 +26,14 @@ export default function GamesList(props) {
     );
 
     function renderGame(game) {
-        const { name, platinumNumber, thumbnail } = game;
+        const { cover, name, platinumNumber, thumbnail } = game;
 
         return (
             <div key={platinumNumber} {...getGameContainerProps(game)}>
                 <div className={styles.imageContainer}>
                     <img alt={getImageAltText(game)}
                          className={styles.image}
-                         src={`/covers/${platinumNumber}.jpg`} />
+                         src={cover} />
                 </div>
                 {platinumNumber === currentPlatinum.platinumNumber &&
                  <h2 className={styles.name}>{name}</h2>}
