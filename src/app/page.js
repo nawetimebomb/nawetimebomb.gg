@@ -1,95 +1,126 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import GameDetails from "@local/components/GameDetails";
+import GamesList from "@local/components/GamesList";
+import games from "@local/data/games.json";
+import Header from "@local/components/Header";
+
+import styles from "./page.module.css";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    const { completed } = games;
+    const [currentPlatinum, setCurrentPlatinum] = useState(completed[0]);
+    const [isAnimating, setIsAnimating] = useState(false);
+    const mainElement = useRef();
+
+    useEffect(() => {
+        setIsAnimating(true);
+
+        setTimeout(() => {
+            setIsAnimating(false);
+        }, 500);
+
+        mainElement.current.focus();
+    }, [currentPlatinum]);
+
+    return (
+        <div {...getProps()}>
+            <div {...getBackgroundProps()} />
+            <div className={styles.backgroundDefault} />
+            <div className={styles.backgroundOverlay} />
+            <div className={styles.container}>
+                <Header completedGames={completed.length} />
+                <main className={styles.main}>
+                    <GamesList {...getGamesListProps()} />
+                    <div {...getContentSectionProps()}>
+                        <div className={styles.contentDescription}>
+                            {currentPlatinum.review.map((paragraph, index) => (
+                                <p key={index} className={styles.paragraph}>{paragraph}</p>
+                            ))}
+                        </div>
+                        <div className={styles.contentDetails}>
+                            <GameDetails {...getDetailsProps()} />
+                        </div>
+                    </div>
+                </main>
+            </div>
         </div>
-      </div>
+    );
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+    function getProps() {
+        return {
+            className: styles.player,
+            onKeyDown: handleKeyDown,
+            ref: mainElement,
+            tabIndex: 0
+        };
+    }
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+    function getBackgroundProps() {
+        const { platinumNumber } = currentPlatinum;
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+        return {
+            className: styles.background,
+            style: {
+                backgroundImage: !isAnimating && `url(backgrounds/${platinumNumber}.jpg)`,
+                opacity: isAnimating ? 0 : 1,
+                transition: !isAnimating && "opacity 0.5s 0.1s ease-in-out"
+            }
+        };
+    }
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+    function getGamesListProps() {
+        return {
+            className: styles.gameSelector,
+            currentPlatinum,
+            games: completed,
+            setCurrentPlatinum,
+        };
+    }
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    function getContentSectionProps() {
+        return {
+            className: styles.content,
+            style: {
+                opacity: isAnimating ? 0 : 1,
+                transition: !isAnimating && "opacity 0.5s ease-in-out"
+            }
+        };
+    }
+
+    function getDetailsProps() {
+        const { platinumNumber } = currentPlatinum;
+
+        return {
+            ...currentPlatinum.details,
+            platinumNumber
+        };
+    }
+
+    function handleKeyDown(event) {
+        const { platinumNumber } = currentPlatinum;
+        let newNumber = platinumNumber;
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (event.keyCode === 37) {
+            if (platinumNumber < completed.length) {
+                newNumber = platinumNumber + 1;
+            }
+        }
+
+        if (event.keyCode === 39) {
+            if (platinumNumber > 1) {
+                newNumber = platinumNumber - 1;
+            }
+        }
+
+        if (platinumNumber !== newNumber) {
+            const platinumIndex = completed.findIndex((element) => element.platinumNumber === newNumber);
+
+            setCurrentPlatinum(completed[platinumIndex]);
+        }
+    }
 }

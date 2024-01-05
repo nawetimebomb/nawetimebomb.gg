@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 1;
+    gap: 10px;
+    overflow-x: auto;
+    padding-right: 400px;
+    height: 280px;
+}
+
+.container::-webkit-scrollbar {
+    width: 0px;
+    background: none;
+}
+
+.gameContainer {
+    border-radius: 36px;
+    flex: 0 0 200px;
+    height: 200px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.gameContainerSelected {
+    border-image-slice: 1;
+    border-style: solid;
+    border-width: 5px;
+    padding: 2px;
+    flex: 0 0 250px;
+    height: 250px;
+}
+
+.image {
+    border-radius: 36px;
+    height: 100%;
+    width: 100%;
+}
+
+.name {
+    bottom: 6px;
+    font-size: 28px;
+    left: 260px;
+    position: absolute;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+    width: 500px;
+}

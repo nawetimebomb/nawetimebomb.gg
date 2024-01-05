@@ -1,0 +1,33 @@
+.list {
+    font-size: 18px;
+    list-style: none;
+}
+
+.listItem {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17px;
+    text-shadow: #000000;
+}
+
+.listItemCentered {
+    display: flex;
+    justify-content: center;
+}
+
+.platinumSection {
+    align-items: center;
+    display: flex;
+}
+
+.platinumNumber {
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+.rating {
+    background-color: #000000;
+    font-size: 32px;
+    padding: 3px 7px;
+}
