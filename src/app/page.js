@@ -35,6 +35,7 @@ export default function Home() {
                     <GamesList {...getGamesListProps()} />
                     <div {...getContentSectionProps()}>
                         <div className={styles.contentDescription}>
+                            <h2 className={styles.gameName}>{currentPlatinum.name}</h2>
                             {currentPlatinum.review.map((paragraph, index) => (
                                 <p key={index} className={styles.paragraph}>{paragraph}</p>
                             ))}
@@ -63,7 +64,7 @@ export default function Home() {
         return {
             className: styles.background,
             style: {
-                backgroundImage: !isAnimating && `url(backgrounds/${platinumNumber}.jpg)`,
+                backgroundImage: !isAnimating && `url(/backgrounds/${platinumNumber}.jpg)`,
                 opacity: isAnimating ? 0 : 1,
                 transition: !isAnimating && "opacity 0.5s 0.1s ease-in-out"
             }

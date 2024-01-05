@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <head>
                 {completed.map((item) => (
-                    <link rel="preload" as="image" href={`backgrounds/${item.platinumNumber}.jpg`} />
+                    <link key={item.platinumNumber} rel="preload" as="image" href={`/backgrounds/${item.platinumNumber}.jpg`} />
                 ))}
             </head>
             <body>{children}</body>

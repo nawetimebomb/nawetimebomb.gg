@@ -11,9 +11,11 @@ export default function GamesList(props) {
     const element = useRef();
 
     useEffect(() => {
+        const estimatedSizeOfItem = 60;
+
         scrollRef.current.scrollTo({
             behavior: "smooth",
-            left: element.current.offsetLeft - (element.current.offsetWidth * 0.8)
+            left: element.current.offsetLeft - estimatedSizeOfItem
         });
     }, [currentPlatinum]);
 
@@ -31,7 +33,7 @@ export default function GamesList(props) {
                 <div className={styles.imageContainer}>
                     <img alt={getImageAltText(game)}
                          className={styles.image}
-                         src={`covers/${platinumNumber}.jpg`} />
+                         src={`/covers/${platinumNumber}.jpg`} />
                 </div>
                 {platinumNumber === currentPlatinum.platinumNumber &&
                  <h2 className={styles.name}>{name}</h2>}

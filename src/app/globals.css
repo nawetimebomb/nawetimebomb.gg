@@ -1,3 +1,7 @@
+:root {
+    --mobile: 700px
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

@@ -63,3 +63,29 @@
     margin-bottom: 20px;
     text-align: justify;
 }
+
+.gameName {
+    display: none;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        padding: 5px 7px;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .contentDetails,
+    .contentDescription {
+        flex: 1;
+    }
+
+    .gameName {
+        display: block;
+    }
+}
